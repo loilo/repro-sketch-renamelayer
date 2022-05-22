@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Reproduction RenameLayer",
+  "description": "A minimal reproduction to demonstrate the RenameLayer Action failing to trigger",
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "React to Actions API triggers",
+      "identifier": "reproduction-actions-api.command",
+      "script": "command.js",
+      "handlers": {
+        "actions": {
+          "SelectionChanged.begin": "onSelectionChanged",
+          "RenameLayer": "onRenameLayer"
+        }
+      }
+    }
+  ]
+}
